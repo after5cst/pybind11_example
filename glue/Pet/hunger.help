@@ -1,0 +1,8 @@
+R"(Read-only integer attribute describing a pet's hunger.
+
+This value reflects the hunger of the pet.  As the pet takes
+walks, this value will increase.  When the pet eats, the
+hunger will return to zero.
+
+A value of zero is not hungry at all.
+)"
