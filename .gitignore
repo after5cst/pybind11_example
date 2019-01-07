@@ -158,3 +158,6 @@ dmypy.json
 
 # Qt Creator Project File
 /CMakeLists.txt.user
+
+# Visual Studio directory
+.vs/
