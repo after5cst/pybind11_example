@@ -6,7 +6,7 @@ option(
 message(STATUS "option ENABLE_ADD_PYTHON_UNIT_TESTS=" ${ENABLE_ADD_PYTHON_UNIT_TESTS})
 
 if(${ENABLE_ADD_PYTHON_UNIT_TESTS})
-    execute_process(COMMAND python3 -m pytest --version
+    execute_process(COMMAND "${PYTHON_EXECUTABLE}" -m pytest --version
       OUTPUT_VARIABLE PYTEST_output
       ERROR_VARIABLE  PYTEST_error
       RESULT_VARIABLE PYTEST_result)
