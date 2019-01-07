@@ -1,7 +1,15 @@
 cmake_minimum_required(VERSION 3.2)
+#----------------------------------------------------------
+# CMake Policy CMP0076
+# The target_sources() command converts relative paths to absolute.
+# Once this policy exists, we have to tell CMake whether or not to
+# use the new behavior or it will generate a compile warning.
+if(POLICY CMP0076)
+	cmake_policy(SET CMP0076 NEW)
+endif(POLICY CMP0076)
 
 #----------------------------------------------------------
-# Step 1: Add pybind11 to the project.
+# Step 1: Add pybind11 *before* the project.
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/pybind11)
 
 #----------------------------------------------------------
